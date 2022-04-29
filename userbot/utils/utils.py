@@ -2,24 +2,18 @@
 # FROM Man-Userbot <https://github.com/mrismanaziz/Man-Userbot>
 # t.me/SharingUserbot & t.me/Lunatic0de
 # Ported By @Itsmesenjaaah
-import shlex
-from typing import Tuple
+
 import asyncio
 import importlib
 import logging
 import sys
 from pathlib import Path
 from random import randint
-from base64 import b64decode
-from git import Repo
-from git.exc import GitCommandError, InvalidGitRepositoryError
 
 import heroku3
 from telethon.tl.functions.contacts import UnblockRequest
 from telethon.tl.functions.channels import (
     CreateChannelRequest,
-    EditPhotoRequest,
-    EditAdminRequest
 )
 from telethon.tl.types import (
     ChatAdminRights,
@@ -32,7 +26,6 @@ from userbot import (
     HEROKU_APP_NAME,
     LOGS,
     bot,
-    branch,
 )
 
 heroku_api = "https://api.heroku.com"
@@ -89,7 +82,7 @@ async def autobot():
     await bot.send_read_acknowledge("botfather")
     if isdone.startswith("Sorry,"):
         ran = randint(1, 100)
-        username = "nja" + (str(who.id))[6:] + str(ran) + "ubot"
+        username = "senja" + (str(who.id))[6:] + str(ran) + "ubot"
         await bot.send_message(bf, username)
         await asyncio.sleep(1)
         nowdone = (await bot.get_messages(bf, limit=1))[0].text
@@ -111,14 +104,14 @@ async def autobot():
             await asyncio.sleep(1)
             await bot.send_message(bf, f"@{username}")
             await asyncio.sleep(1)
-            await bot.send_message(bf, f"Managed With ☕️ By {who.first_name}")
+            await bot.send_message(bf, f"Managed With ❤️ By {who.first_name}")
             await asyncio.sleep(3)
             await bot.send_message(bf, "/setdescription")
             await asyncio.sleep(1)
             await bot.send_message(bf, f"@{username}")
             await asyncio.sleep(1)
             await bot.send_message(
-                bf, f"✨ Owner ~ {who.first_name} ✨\n\n✨ Powered By ~ @SenjaProjectt ✨"
+                bf, f"⚡️ Owner ~ {who.first_name} ⚡️\n\n⚡️ Powered By ~ @senjaprojectt ⚡️"
             )
             await bot.send_message(
                 BOTLOG_CHATID,
@@ -128,19 +121,6 @@ async def autobot():
                 BOTLOG_CHATID,
                 "**Tunggu Sebentar, Sedang MeRestart Heroku untuk Menerapkan Perubahan.**",
             )
-            rights = ChatAdminRights(
-                add_admins=False,
-                invite_users=True,
-                change_info=True,
-                ban_users=True,
-                delete_messages=True,
-                pin_messages=True,
-                anonymous=False,
-                manage_call=True,
-            )
-            await bot(EditAdminRequest(int(BOTLOG_CHATID), f"@{username}", rights, "ᴀssɪsᴛᴀɴᴛ  sᴇɴᴊᴀ"))
-            kntl = "resources/extras/IMG_20220429_231525.jpg"
-            await bot(EditPhotoRequest(BOTLOG_CHATID, await bot.upload_file(kntl)))
             heroku_var["BOT_TOKEN"] = token
             heroku_var["BOT_USERNAME"] = f"@{username}"
         else:
@@ -166,14 +146,14 @@ async def autobot():
         await asyncio.sleep(1)
         await bot.send_message(bf, f"@{username}")
         await asyncio.sleep(1)
-        await bot.send_message(bf, f"Managed With ☕️ By {who.first_name}")
+        await bot.send_message(bf, f"Managed With ❤️ By {who.first_name}")
         await asyncio.sleep(3)
         await bot.send_message(bf, "/setdescription")
         await asyncio.sleep(1)
         await bot.send_message(bf, f"@{username}")
         await asyncio.sleep(1)
         await bot.send_message(
-            bf, f"✨ Owner ~ {who.first_name} ✨\n\n✨ Powered By ~ @SenjaProjectt ✨"
+            bf, f"⚡️ Owner ~ {who.first_name} ⚡️\n\n⚡️ Powered By ~ @senjasupportt ⚡️"
         )
         await bot.send_message(
             BOTLOG_CHATID,
@@ -183,19 +163,6 @@ async def autobot():
             BOTLOG_CHATID,
             "**Tunggu Sebentar, Sedang MeRestart Heroku untuk Menerapkan Perubahan.**",
         )
-        rights = ChatAdminRights(
-            add_admins=False,
-            invite_users=True,
-            change_info=True,
-            ban_users=True,
-            delete_messages=True,
-            pin_messages=True,
-            anonymous=False,
-            manage_call=True,
-        )
-        await bot(EditAdminRequest(int(BOTLOG_CHATID), f"@{username}", rights, "ᴀssɪsᴛᴀɴᴛ  sᴇɴᴊᴀ"))
-        kntl = "resources/extras/IMG_20220429_231525.jpg"
-        await bot(EditPhotoRequest(BOTLOG_CHATID, await bot.upload_file(kntl)))
         heroku_var["BOT_TOKEN"] = token
         heroku_var["BOT_USERNAME"] = f"@{username}"
     else:
@@ -271,76 +238,78 @@ def remove_plugin(shortname):
         raise ValueError
 
 
-# bye Ice-Userbot
+# by Kyy-Userbot
+
+async def create_supergroup(group_name, client, botusername, descript):
+    try:
+        result = await client(
+            functions.channels.CreateChannelRequest(
+                title=group_name,
+                about=descript,
+                megagroup=True,
+            )
+        )
+        created_chat_id = result.chats[0].id
+        result = await client(
+            functions.messages.ExportChatInviteRequest(
+                peer=created_chat_id,
+            )
+        )
+        await client(
+            functions.channels.InviteToChannelRequest(
+                channel=created_chat_id,
+                users=[botusername],
+            )
+        )
+    except Exception as e:
+        return "error", str(e)
+    if not str(created_chat_id).startswith("-100"):
+        created_chat_id = int("-100" + str(created_chat_id))
+    return result, created_chat_id
+
 
 async def autopilot():
-    LOGS.info("TUNGGU SEBENTAR. SEDANG MEMBUAT GROUP LOG USERBOT UNTUK ANDA")
-    desc = "ᴍʏ sᴇɴᴊᴀ ʟᴏɢs ɢʀᴏᴜᴘ\n\n Join @SenjaProject"
-    try:
-        grup = await bot(
-            CreateChannelRequest(title="sᴇɴᴊᴀ ʟᴏɢs", about=desc, megagroup=True)
-        )
-        grup_id = grup.chats[0].id
-    except Exception as e:
-        LOGS.error(str(e))
-        LOGS.warning(
-            "var BOTLOG_CHATID kamu belum di isi. Buatlah grup telegram dan masukan bot @MissRose_bot lalu ketik /id Masukan id grup nya di var BOTLOG_CHATID"
-        )
-    if not str(grup_id).startswith("-100"):
-        grup_id = int(f"-100{str(grup_id)}")
-    heroku_var["BOTLOG_CHATID"] = grup_id
-
-
-def install_req(cmd: str) -> Tuple[str, str, int, int]:
-    async def install_requirements():
-        args = shlex.split(cmd)
-        process = await asyncio.create_subprocess_exec(
-            *args,
-            stdout=asyncio.subprocess.PIPE,
-            stderr=asyncio.subprocess.PIPE,
-        )
-        stdout, stderr = await process.communicate()
-        return (
-            stdout.decode("utf-8", "replace").strip(),
-            stderr.decode("utf-8", "replace").strip(),
-            process.returncode,
-            process.pid,
-        )
-
-    return asyncio.get_event_loop().run_until_complete(install_requirements())
-
-
-def git():
-    UPSTREAM_REPO = b64decode(
-        "aHR0cHM6Ly9naXRodWIuY29tL211aGFtbWFkcml6a3kxNi9LeXktVXNlcmJvdA=="
-    ).decode("utf-8")
-    try:
-        repo = Repo()
-        LOGS.info("Git Client Found")
-    except GitCommandError:
-        LOGS.info("Invalid Git Command")
-    except InvalidGitRepositoryError:
-        repo = Repo.init()
-        if "origin" in repo.remotes:
-            origin = repo.remote("origin")
-        else:
-            origin = repo.create_remote("origin", UPSTREAM_REPO)
-        origin.fetch()
-        repo.create_head(
-            branch,
-            origin.refs[branch],
-        )
-        repo.heads[branch].set_tracking_branch(origin.refs[branch])
-        repo.heads[branch].checkout(True)
+    if BOTLOG_CHATID and str(BOTLOG_CHATID).startswith("-100"):
+        return
+    k = []  # To Refresh private ids
+    async for x in bot.iter_dialogs():
+        k.append(x.id)
+    if BOTLOG_CHATID:
         try:
-            repo.create_remote("origin", UPSTREAM_REPO)
+            await bot.get_entity(int("BOTLOG_CHATID"))
+            return
         except BaseException:
-            pass
-        nrs = repo.remote("origin")
-        nrs.fetch(branch)
-        try:
-            nrs.pull(branch)
-        except GitCommandError:
-            repo.git.reset("--hard", "FETCH_HEAD")
-        install_req("pip3 install --no-cache-dir -r requirements.txt")
-        LOGS.info("Fetched Updates from Nja-Userbot")
+            del heroku_var["BOTLOG_CHATID"]
+    try:
+        r = await bot(
+            CreateChannelRequest(
+                title="sᴇɴᴊᴀ ʟᴏɢs",
+                about="ᴍʏ sᴇɴᴊᴀ ʟᴏɢs ɢʀᴏᴜᴘ\n\n Join @senjasupportt",
+                megagroup=True,
+            ),
+        )
+    except ChannelsTooMuchError:
+        LOGS.info(
+            "Terlalu banyak channel dan grup, hapus salah satu dan restart lagi"
+        )
+        exit(1)
+    except BaseException:
+        LOGS.info(
+            "Terjadi kesalahan, Buat sebuah grup lalu isi id nya di config var BOTLOG_CHATID."
+        )
+        exit(1)
+    chat_id = r.chats[0].id
+    if not str(chat_id).startswith("-100"):
+        heroku_var["BOTLOG_CHATID"] = "-100" + str(chat_id)
+    else:
+        heroku_var["BOTLOG_CHATID"] = str(chat_id)
+    rights = ChatAdminRights(
+        add_admins=True,
+        invite_users=True,
+        change_info=True,
+        ban_users=True,
+        delete_messages=True,
+        pin_messages=True,
+        anonymous=False,
+        manage_call=True,
+    )
