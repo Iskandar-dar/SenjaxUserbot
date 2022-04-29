@@ -51,15 +51,15 @@ if not BOTLOG_CHATID:
     bot.loop.run_until_complete(autopilot())
 
 LOGS.info(
-    f"Jika {user.first_name} Membutuhkan Bantuan, Silahkan Tanyakan di Grup https://t.me/rexaprivateroom")
+    f"Jika {user.first_name} Membutuhkan Bantuan, Silahkan Tanyakan di Grup https://t.me/senjasupportt")
 LOGS.info(
-    f"🦖Xa-Userbot🦖 ⚙️ V{BOT_VER} [TELAH DIAKTIFKAN!]")
+    f"🐣SenjaxUserbot🐣 ⚙️ V{BOT_VER} [TELAH DIAKTIFKAN!]")
 
 
 async def check_alive():
     try:
         if BOTLOG_CHATID != 0:
-            await bot.send_file(BOTLOG_CHATID, ALIVE_LOGO, caption=f"🦖**Xa Userbot Berhasil Diaktifkan**!!\n━━━━━━━━━━━━━━━\n➠ **Userbot Version** - `8.1@Xa-Userbot`\n➠ **Ketik** `{cmd}ping` **Untuk Mengecheck Bot**\n━━━━━━━━━━━━━━━\n➠ **Powered By:** @tirexgugel ")
+            await bot.send_file(BOTLOG_CHATID, ALIVE_LOGO, caption=f"🐣**Senja Userbot Berhasil Diaktifkan**!!\n━━━━━━━━━━━━━━━\n➠ **Userbot Version** - `8.1@SenjaxUserbot`\n➠ **Ketik** `{cmd}ping` **Untuk Mengecheck Bot**\n━━━━━━━━━━━━━━━\n➠ **Powered By:** @Senjaprojectt ")
     except Exception as e:
         LOGS.info(str(e))
     try:
