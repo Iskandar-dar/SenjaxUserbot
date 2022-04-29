@@ -23,7 +23,7 @@
       "required": true
     },
      "STRING_SESSION": {
-      "description": "Dapatkan String Session di bot @xastringronbot",
+      "description": "Dapatkan String Session di bot @senjastring_bot",
       "required": true
     },
     "HEROKU_APP_NAME": {
