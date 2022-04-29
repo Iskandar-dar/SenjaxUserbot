@@ -164,9 +164,9 @@ async def bot_ver(event):
         revout = str(stdout.decode().strip()) + str(stderr.decode().strip())
 
         await event.edit(
-            "**⌬-**🦖Xa-Userbot🦖 Versi:** \n "
-            f"heads/Xa-Userbot-0-x634i7u1"
-            "\n**⌬-**Revisi:**\n "
+            "**☻︎-**🐣SenjaxUserbot🐣 Versi:** \n "
+            f"heads/SenjaxUserbot-0-x634i7u1"
+            "\n**☻︎-**Revisi:**\n "
             f"{revout}"
         )
     else:
@@ -228,15 +228,15 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f" **⌬ɪᴍ ᴀʟɪᴠᴇ ғᴏʀ ʜᴇʟᴘɪɴɢ ʏᴏᴜ⌬** \n\n"
+        f" **☻︎ɪᴍ ᴀʟɪᴠᴇ ғᴏʀ ʜᴇʟᴘɪɴɢ ʏᴏᴜ☻︎** \n\n"
         f"\n__**{XA_TEKS_KUSTOM}**__\n\n\n"
-        f"⌬ `Name       :` {DEFAULTUSER} \n"
-        f"⌬ `Username   :` @{user.username} \n"
-        f"⌬ `Telethon   :` {version.__version__} \n"
-        f"⌬ `Python     :` {python_version()} \n"
-        f"⌬ `Bot Ver    :` {BOT_VER} \n"
-        f"⌬ `Modules    :` {len(modules)} \n"
-        f"[ɢʀᴏᴜᴘꜱ](https://t.me/rexaprivateroom) | [ᴄʜᴀɴɴᴇʟ](https://t.me/tirexgugel) | [ᴏᴡɴᴇʀ](https://t.me/JustRex) | [ɢɪᴛʜᴜʙ](https://github.com/Rexashh/Xa-Userbot)")
+        f"☻︎ `Name       :` {DEFAULTUSER} \n"
+        f"☻︎ `Username   :` @{user.username} \n"
+        f"☻︎ `Telethon   :` {version.__version__} \n"
+        f"☻︎ `Python     :` {python_version()} \n"
+        f"☻︎ `Bot Ver    :` {BOT_VER} \n"
+        f"☻︎ `Modules    :` {len(modules)} \n"
+        f"[ɢʀᴏᴜᴘꜱ](https://t.me/senjasupportt) | [ᴄʜᴀɴɴᴇʟ](https://t.me/senjaprojenctt) | [ᴏᴡɴᴇʀ](https://t.me/Itsmesenjaaah) | [ɢɪᴛʜᴜʙ](https://github.com/Itsmesenja/SenjaxUserbot)")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
@@ -262,7 +262,7 @@ async def amireallyalive(alive):
     await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f"⌬ 🤴 ▫ `ᴏᴡɴᴇʀ     :`[ʀᴇxᴀ](t.me/JustRex) \n"
+        f"⌬ 🤴 ▫ `ᴏᴡɴᴇʀ     :`[sᴇɴᴊᴀ](t.me/Itsmesenja) \n"
         f"⌬ 🖥️ ▫ `sʏsᴛᴇᴍ    :`Ubuntu 20.10 \n"
         f"⌬ ⚙️ ▫ `ᴛᴇʟᴇᴛʜᴏɴ   :`v.{version.__version__} \n"
         f"⌬ 🐍 ▫ `ᴘʏᴛʜᴏɴ    :`v.{python_version()} \n"
@@ -302,7 +302,7 @@ async def redis(alive):
     await alive.edit("🤖")
     await asyncio.sleep(3)
     output = (
-        f"**xᴀ-ᴜsᴇʀʙᴏᴛ⚡**\n"
+        f"**sᴇɴᴊᴀ x ᴜsᴇʀʙᴏᴛ⚡**\n"
         f"┏━━━━━━━━━━━━━━━━━━━━━━ \n"
         f"┣  `Name     :` {DEFAULTUSER} \n"
         f"┣  `Username :` @{user.username} \n"
@@ -311,9 +311,9 @@ async def redis(alive):
         f"┣  `Branch   :` {UPSTREAM_REPO_BRANCH} \n"
         f"┣  `Bot Ver  :` {BOT_VER} \n"
         f"┣  `Modules  :` {len(modules)} Modules \n"
-        f"┣  `GitHub   :` [xᴀ-ᴜsᴇʀʙᴏᴛ](https://github.com/Rexashh/Xa-Userbot) \n"
-        f"┣  `Support  :` [xᴀsᴜᴘᴘᴏʀᴛ](https://t.me/rexaprivateroom) \n"
-        f"┣  `Owner    :` [ʀᴇxᴧ-ᴇx](https://t.me/JustRex) \n"
+        f"┣  `GitHub   :` [sᴇɴᴊᴀxᴜsᴇʀʙᴏᴛ](https://github.com/Itsmesenja/SenjaxUserbot) \n"
+        f"┣  `Support  :` [sᴇɴᴊᴀsᴜᴘᴘᴏʀᴛ](https://t.me/rexaprivateroom) \n"
+        f"┣  `Owner    :` [sᴇɴᴊᴀ](https://t.me/Itsmesenjaaah) \n"
         f"┗━━━━━━━━━━━━━━━━━━━━━")
     if ALIVE_LOGO:
         try:
@@ -358,8 +358,8 @@ async def redis(alive):
         f"HEY!! I'M ALIVE FOR HELPING YOU! \n"
         f"⌬ 🤖  `Bot Owned   :`{DEFAULTUSER} \n"
         f"⌬ 👨‍🚀  `Username    :`@{user.username} \n"
-        f"⌬ ⚙️  `OwnerRepo   :` [ʀᴇxᴧ-ᴇx](https://t.me/JustRex) \n"
-        f"⌬ 🐍  `Repo        :` [xᴀ-ᴜsᴇʀʙᴏᴛ](https://github.com/Rexashh/Xa-Userbot) \n"
+        f"⌬ ⚙️  `OwnerRepo   :` [sᴇɴᴊᴀ](https://t.me/JustRex) \n"
+        f"⌬ 🐍  `Repo        :` [sᴇɴᴊᴀxᴜsᴇʀʙᴏᴛ](https://github.com/Itsmesenja/SenjaxUserbot) \n"
         f"⌬ 📡  `Branch      :` {UPSTREAM_REPO_BRANCH} \n"
         f"⌬ 📂  `Module      :`{len(modules)} ")
     if ALIVE_LOGO:
