@@ -33,15 +33,15 @@ pacar = [
     "**Saya Hadir Untuk Melindungi Cewe Dari Laki Laki Sangean** 😎",
 ]
 
-xaown = [
+njaown = [
     "**Hello aku fans mu** 😎 ",
     "**Asikkk dipanggil idola 😚**",
     "**Iya bang?ada apa ya? saya masih fansmu kok**",
     "**Halo bang, saya ngefans** 😁",
-    "**Hi tuan Rexa apakah ada yg bisa saya bantu?**",
+    "**Hi tuan Senja apakah ada yg bisa saya bantu?**",
 ]
 
-xaalive = [
+njaalive = [
     "**im alive ** 😎 ",
     "**hi my owner im already wakeup 🚀**",
     "**Hi my owner how can I help?**",
@@ -189,13 +189,13 @@ async def pingme(pong):
     """For .ping command, ping the userbot from any chat."""
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    ping = await edit_or_reply(pong, "**𖣘**")
-    await ping.edit("**𖣘𖣘**")
-    await ping.edit("**𖣘𖣘𖣘**")
+    ping = await edit_or_reply(pong, "**⁂**")
+    await ping.edit("**⁂⁂**")
+    await ping.edit("**⁂⁂⁂**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await ping.edit(
-        f"**PONG!!!🏓**\n"
+        f"**PING!!!**\n"
         f"• **ᴘɪɴɢᴇʀ** ⪼ "
         f"`%sms` \n"
         f"• **ᴜᴘᴛɪᴍᴇ** ⪼ "
@@ -228,7 +228,7 @@ async def speedtst(spd):
         f"`{result['ping']}` \n"
         "⌬ **ISP:** "
         f"`{result['client']['isp']}` \n"
-        "⌬ **BOT:** 🦖 xᴀ-ᴜsᴇʀʙᴏᴛ 🦖"
+        "⌬ **BOT:** 🐣 sᴇɴᴊᴀxᴜsᴇʀʙᴏᴛ 🐣"
     )
 
 
