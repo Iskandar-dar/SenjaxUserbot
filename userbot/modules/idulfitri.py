@@ -1,5 +1,5 @@
 # Jangan hapus ini ya mmk!
-# By @JustRex Xa-Userbot
+# By @Itsmesenjaaah SenjaxUserbot
 
 from time import sleep
 from userbot import CMD_HANDLER as cmd
