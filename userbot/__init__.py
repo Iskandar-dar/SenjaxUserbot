@@ -258,7 +258,7 @@ YOUTUBE_API_KEY = os.environ.get(
     "YOUTUBE_API_KEY") or "AIzaSyACwFrVv-mlhICIOCvDQgaabo6RIoaK8Dg"
 
 # Untuk Perintah .xaalive
-XA_TEKS_KUSTOM = os.environ.get("XA_TEKS_KUSTOM", "ʜᴇʏ, ɪᴍ ᴜsɪɴɢ sᴇɴᴊᴀxᴜsᴇʀʙᴏᴛ⍟")
+XA_TEKS_KUSTOM = os.environ.get("XA_TEKS_KUSTOM", "ʜᴇʏ, ɪᴍ ᴜsɪɴɢ sᴇɴᴊᴀxᴜsᴇʀʙᴏᴛ⌬")
 
 # Untuk Mengubah Pesan Welcome
 START_WELCOME = os.environ.get("START_WELCOME", None)
@@ -301,10 +301,10 @@ INLINE_PIC = os.environ.get(
     "INLINE_PIC") or "https://telegra.ph/file/922aee497e89433ef5cfb.jpg"
 
 # Default emoji help
-EMOJI_HELP = os.environ.get("EMOJI_HELP") or "☻︎"
+EMOJI_HELP = os.environ.get("EMOJI_HELP") or "⚡"
 
 # °Xa-Userbot°
-OWNER_URL = os.environ.get("OWNER_URL") or "https://t.me/itsmesenjaaah"
+OWNER_URL = os.environ.get("OWNER_URL") or "https://t.me/Itsmesenjaaah"
 
 DEFAULT = list(map(int, b64decode("MTIyNDE0MzU0NA==").split()))
 
@@ -663,12 +663,12 @@ with bot:
             builder = event.builder
             result = None
             query = event.text
-            if event.query.user_id == uid and query.startswith("@XaUserbot"):
+            if event.query.user_id == uid and query.startswith("@SenjaxUserbot"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = await event.builder.photo(
                     file=xalogo,
                     link_preview=False,
-                    text=f"**⚡ sᴇɴᴊᴀxᴜsᴇʀʙᴏᴛ ɪɴʟɪɴᴇ ᴍᴇɴᴜ ⚡**\n\n☻︎ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n☻︎ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**",
+                    text=f"**⚡ sᴇɴᴊᴀᴜsᴇʀʙᴏᴛ ɪɴʟɪɴᴇ ᴍᴇɴᴜ ⚡**\n\n⌬ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n⌬ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**",
                     buttons=buttons,
                 )
             elif query.startswith("repo"):
@@ -681,7 +681,7 @@ with bot:
                         0,
                         "image/jpeg",
                         []),
-                    text="**Senja x Userbot**\n≫≫≫≫≫≫≫≫≫≫\n☻︎ **ᴏᴡɴᴇʀ ʀᴇᴘᴏ :** [𝑺𝑬𝑵𝑱𝑨シ︎](https://t.me/Itsmesenjaaah)\n☻︎ **sᴜᴘᴘᴏʀᴛ :** @senjasupportt\n☻︎ **ʀᴇᴘᴏsɪᴛᴏʀʏ :** [SenjaxUserbot](https://github.com/Itsmesenja/SenjaxUserbot)\n≫≫≫≫≫≫≫≫≫≫",
+                    text="**Senja x Userbot**\n≫≫≫≫≫≫≫≫≫≫\n⌬ **ᴏᴡɴᴇʀ ʀᴇᴘᴏ :** [𝑺𝑬𝑵𝑱𝑨シ︎](https://t.me/Itsmesenjaaah)\n⌬ **sᴜᴘᴘᴏʀᴛ :** @senjasupportt\n⌬ **ʀᴇᴘᴏsɪᴛᴏʀʏ :** [SenjaxUserbot](https://github.com/Itsmesenja/SenjaxUserbot)\n≫≫≫≫≫≫≫≫≫≫",
                     buttons=[
                         [
                             custom.Button.url(
@@ -731,13 +731,13 @@ with bot:
                 result = builder.article(
                     title="⚡ sᴇɴᴊᴀxᴜsᴇʀʙᴏᴛ ⚡",
                     description="Senja Userbot | Telethon",
-                    url="https://t.me/senjasupportt",
+                    url="https://t.me/senjaprojectt",
                     thumb=InputWebDocument(
                         ALIVE_LOGO,
                         0,
                         "image/jpeg",
                         []),
-                    text=f"**SenjaxUserbot**\n➖➖➖➖➖➖➖➖➖➖\n⌬ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n⌬ **ᴀssɪsᴛᴀɴᴛ:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**ᴜᴘᴅᴀᴛᴇs:** @tirexgugel\n➖➖➖➖➖➖➖➖➖➖",
+                    text=f"**SenjaxUserbot**\n➖➖➖➖➖➖➖➖➖➖\n⌬ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n⌬ **ᴀssɪsᴛᴀɴᴛ:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**ᴜᴘᴅᴀᴛᴇs:** @senjaprojectt\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url(
