@@ -335,7 +335,7 @@ async def redis(alive):
         await alive.delete()
 
 
-@Xa_cmd(pattern="xacheck$")
+@Xa_cmd(pattern="njacheck$")
 async def redis(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
@@ -419,7 +419,7 @@ CMD_HELP.update({
     "\n↳ : Changes the 'user' in alive to the text you want."
     f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}restalive`"
     "\n↳ : Resets the user to default."
-    f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}xacheck`"
+    f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}njacheck`"
     "\n↳ : Sama kaya .alive."
 })
 CMD_HELP.update(
