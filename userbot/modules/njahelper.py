@@ -25,7 +25,7 @@ async def var(m):
 
 
 CMD_HELP.update({
-    "helper":
+    "njahelper":
     "`.lhelp`\
 \nUsage: Bantuan Untuk SenjaxUserbot.\
 \n`.vars`\
