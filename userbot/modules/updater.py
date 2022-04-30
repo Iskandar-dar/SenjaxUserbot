@@ -219,7 +219,7 @@ async def upstream(event):
         else:
             await xx.edit(changelog_str)
         return await event.respond(
-            f"**Perintah Untuk Update, Sebagai Berikut.**\n👨‍🚀 𝘾𝙤𝙢𝙢𝙖𝙣𝙙: >`{cmd}update now` (Sementara)\n👨‍🚀 𝘾𝙤𝙢𝙢𝙖𝙣𝙙: >`{cmd}update deploy` (Permanen)\n\n__Untuk Meng Update Fitur Terbaru Dari ⚡xᴀ-ᴜsᴇʀʙᴏᴛ⚡.__"
+            f"**Perintah Untuk Update, Sebagai Berikut.**\n👨‍🚀 𝘾𝙤𝙢𝙢𝙖𝙣𝙙: >`{cmd}update now` (Sementara)\n👨‍🚀 𝘾𝙤𝙢𝙢𝙖𝙣𝙙: >`{cmd}update deploy` (Permanen)\n\n__Untuk Meng Update Fitur Terbaru Dari ⚡sᴇɴᴊᴀ x ᴜsᴇʀʙᴏᴛ⚡.__"
         )
 
     if force_update:
@@ -233,7 +233,7 @@ async def upstream(event):
         await xx.edit("` Proses Update ⚡sᴇɴᴊᴀxᴜsᴇʀʙᴏᴛ⚡, Loading....77%`")
         await xx.edit("` Proses Update ⚡sᴇɴᴊᴀxᴜsᴇʀʙᴏᴛ⚡, Updating...90%`")
         await xx.edit(
-            "` Proses Update ⚡sᴇɴᴊᴀxᴜsᴇʀʙᴏᴛ⚡, Mohon Tunggu Sebentar....100%`"
+            "` Proses Update ⚡sᴇɴᴊᴀ x ᴜsᴇʀʙᴏᴛ⚡, Mohon Tunggu Sebentar....100%`"
         )
 
     if conf == "now":
@@ -252,8 +252,8 @@ CMD_HELP.update(
         "update": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}update`"
         "\n• : Untuk Melihat Pembaruan Terbaru SenjaxUserbot."
         f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}update now`"
-        "\n• : Memperbarui Xa-Userbot."
+        "\n• : Memperbarui Senja x Userbot."
         f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}update deploy`"
-        "\n• : Memperbarui SenjaxUserbot Dengan Cara Men-Deploy Ulang."
+        "\n• : Memperbarui Senja x Userbot Dengan Cara Men-Deploy Ulang."
     }
 )
