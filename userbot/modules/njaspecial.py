@@ -198,7 +198,7 @@ async def _(event):
         lebarannya = [
             lebaran
             async for lebaran in event.client.iter_messages(
-                "@lebaranxauserbot", filter=InputMessagesFilterPhotos
+                "@lebaransenjaxuserbot", filter=InputMessagesFilterPhotos
             )
         ]
         xa = await event.client.get_me()
